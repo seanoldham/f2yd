@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   resources :users
   resources :sessions
+  resources :charges
   get "secret" => "home#secret", :as => "secret"
   get 'home/index'
   get 'home/new'

@@ -33,6 +33,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'rails_12factor'
 
+gem 'stripe'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -44,4 +46,3 @@ gem 'rails_12factor'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
