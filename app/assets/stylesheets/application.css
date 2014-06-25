@@ -12,4 +12,17 @@
  *
  *= require_tree .
  *= require_self
+ *= require 'animate'
+ *= require 'bootstrap-theme'
+ *= require 'bootstrap-theme.min'
+ *= require 'bootstrap'
+ *= require 'bootstrap.min'
+ *= require 'color-green'
+ *= require 'home'
+ *= require 'lightbox'
+ *= require 'screen'
+ *= require 'sessions'
+ *= require 'style'
+ *= require 'users'
+ *= require 'width-boxed'
  */
