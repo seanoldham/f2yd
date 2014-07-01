@@ -29,11 +29,23 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'sorcery'
 
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'twitter-bootstrap-rails'
 
 gem 'rails_12factor'
 
 gem 'stripe'
+
+gem 'jquery-ui-rails'
+
+gem 'less-rails-bootstrap', '~> 3.0'
+
+gem 'font-awesome-rails'
+
+gem 'formtastic-bootstrap'
+
+gem 'xkimo'
+
+gem 'therubyracer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

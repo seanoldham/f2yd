@@ -5,12 +5,21 @@
 // or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
 //
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
+// the compiled file.
 //
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require f2yd/app
+//= require f2yd/bootstrap
+//= require f2yd/holder
+//= require f2yd/html5shiv
+//= require f2yd/jquery-1.10.2.min
+//= require f2yd/jquery.cookie
+//= require f2yd/jquery.countdown
+//= require f2yd/jquery.mixitup.min
+//= require f2yd/lightbox-2.6.min
+//= require f2yd/modernizr.custom
+//= require f2yd/respond.min
+//= require f2yd/styleswitcher

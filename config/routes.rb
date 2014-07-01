@@ -1,15 +1,24 @@
 Rails.application.routes.draw do
-  root :to => "home#index"
-  get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
-  get "signup" => "users#new", :as => "signup"
-  resources :users
-  resources :sessions
-  resources :charges
-  get "secret" => "home#secret", :as => "secret"
-  get 'home/index'
-  get 'home/new'
+
   
+#get "pages/index"
+#get "pages/blog_main"
+#get "pages/blog_single"
+#get "pages/contact"
+#get "pages/full_width"
+#get "pages/portfolio"
+#get "pages/two_column"
+
+root :to => 'home#index'
+
+get "logout" => "sessions#destroy", :as => "logout"
+get "login" => "sessions#new", :as => "login"
+get "signup" => "users#new", :as => "signup"
+resources :users
+resources :sessions
+resources :charges
+get "secret" => "home#secret", :as => "secret"
+
   # get 'sessions/new'
 
   # get 'users/new'

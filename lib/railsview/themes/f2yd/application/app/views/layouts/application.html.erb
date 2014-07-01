@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms to Your Door</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="boxed animated fadeIn animation-delay-5">
+		<header id="header" class="hidden-xs">
+      <div class="container">
+        <div id="header-title">
+          <h1 class="animated fadeInDown"><a href="index.html">Forms to Your <span>Door</span></a></h1>
+          <p class="animated fadeInLeft">All your forms, right to your door.</p>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar navbar-static-top navbar-mind" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand visible-xs" href="index.html">Forms to Your <span>Door</span></a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-mind-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-bars fa-inverse"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-mind-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="pricing.html">Pricing</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+							<% if current_user %>
+								<li>Logged in as <%= current_user.email %></li>
+								<li><%= link_to "Log out", logout_path %></li>
+							<% else %>
+								<li><%= link_to "Sign up", signup_path %></li>
+								<li><%= link_to "Log in", login_path %></li>
+							<% end %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login</a>
+                <div class="dropdown-menu dropdown-login animated fadeInUp">
+                  <form role="form">
+                    <div class="form-group">
+                      <div class="input-group login-input">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" placeholder="Username">
+                      </div>
+                      <br>
+                      <div class="input-group login-input">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" class="form-control" placeholder="Password">
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary pull-right">Login</button>
+                      <div class="clearfix"></div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User name</a>
+                <div class="dropdown-menu dropdown-profile animated fadeInUp">
+                  <img src="img/avatar.jpg" class="imageborder alignleft" alt="image"> 
+                  <h4>@username</h4>
+                  @email<br>
+                  <a href="profile.html">Profile</a> | <a href="#">Schedule</a><br>
+                  <a href="#">Account</a> | <a href="#">Logout</a>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+		<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, :id => "flash_#{name}" %>
+		<% end %>
+		<div class="container-fluid">
+		<%= yield %>
+		</div>
+      <aside id="footer-widgets">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <h3 class="footer-widget-title">Sitemap</h3>
+              <ul class="list-unstyled three_cols">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+        </div>
+      </aside>
+      <footer id="footer">
+        <p>&copy; 2014 BUSINESS NAME HERE. All rights reserved.</p>
+      </footer>
+	</div>
+</body>
+</html>
