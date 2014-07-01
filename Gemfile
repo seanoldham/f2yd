@@ -41,10 +41,6 @@ gem 'less-rails-bootstrap', '~> 3.0'
 
 gem 'font-awesome-rails'
 
-gem 'formtastic-bootstrap'
-
-gem 'xkimo'
-
 gem 'therubyracer'
 
 # Use ActiveModel has_secure_password
