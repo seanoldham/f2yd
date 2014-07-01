@@ -31,7 +31,9 @@ gem 'sorcery'
 
 gem 'twitter-bootstrap-rails'
 
-gem 'rails_12factor'
+group :production do
+	gem 'rails_12factor'
+end
 
 gem 'stripe'
 
