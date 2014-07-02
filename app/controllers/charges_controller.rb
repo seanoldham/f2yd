@@ -1,6 +1,7 @@
 class ChargesController < ApplicationController
+	before_filter :require_login, :only => :create
+
 	def new
-	
 	end
 
 	def create

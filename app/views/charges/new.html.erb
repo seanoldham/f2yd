@@ -27,7 +27,6 @@
 			      <%= form_tag charges_path do %>
 							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 						          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-email=<%= current_user.email %>
                       data-name="Forms to Your Door"
 						          data-description="Budget-Friendly - $9.99"
 						          data-amount="999"
@@ -58,7 +57,6 @@
             <%= form_tag charges_path do %>
 							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 						          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-email=<%= current_user.email %>
                       data-name="Forms to Your Door"
 						          data-description="Test Taker - $14.99"
 						          data-amount="1499"
@@ -89,7 +87,6 @@
             <%= form_tag charges_path do %>
 							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 						          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-email=<%= current_user.email %>
                       data-name="Forms to Your Door"
 						          data-description="Dean's List - $19.99"
 						          data-amount="1999"
