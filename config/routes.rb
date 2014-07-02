@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
 root :to => 'home#index'
 
 get "logout" => "sessions#destroy", :as => "logout"
@@ -6,9 +7,14 @@ get "login" => "sessions#new", :as => "login"
 get "signup" => "users#new", :as => "signup"
 get "secret" => "home#secret", :as => "secret"
 get "pricing" => "charges#new", :as => "pricing"
+get 'password_resets/create'
+get 'password_resets/edit'
+get 'password_resets/update'
+
 resources :users
 resources :sessions
 resources :charges
+resources :password_resets
 
 
   # get 'sessions/new'
