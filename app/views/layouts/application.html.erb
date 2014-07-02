@@ -41,7 +41,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
 							<% if current_user %>
-								<li>Logged in as <%= current_user.email %></li>
+								<p class="navbar-text">Logged in as <%= current_user.email %></p>
 								<li><%= link_to "Log out", logout_path %></li>
 							<% else %>
 								<li><%= link_to "Sign up", signup_path %></li>
@@ -96,15 +96,13 @@
             <div class="col-md-4">
             </div>
             <div class="col-md-4">
-              <h3 class="footer-widget-title">Sitemap</h3>
+              <h3></h3>
               <ul class="list-unstyled three_cols">
                 <li><a href="/">Home</a></li>
+                <li><a href="login.html">Login</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Team</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">FAQ</a></li>
-                <li><a href="#">Login</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </div>

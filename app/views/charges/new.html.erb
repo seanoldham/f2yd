@@ -24,15 +24,19 @@
             </ul>
           </div>
 					<div class="pricing-box-footer">
-			      <%= form_tag charges_path do %>
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-						          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-name="Forms to Your Door"
-						          data-description="Budget-Friendly - $9.99"
-						          data-amount="999"
-                      data-panel-label="Pay {{amount}}">
-						  </script>
-						<% end %>
+			      <% if current_user %>
+                <%= form_tag charges_path do %>
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                          data-name="Forms to Your Door"
+                          data-description="Budget-Friendly - $9.99"
+                          data-amount="999"
+                          data-panel-label="Pay {{amount}}">
+                  </script>
+                <% end %>
+              <% else %>
+                <button type="button" class="btn btn-default"><%= link_to "Log In to Purchase", login_path %></button>
+            <% end %>
           </div>
         </div>
       </div>
@@ -54,15 +58,19 @@
             </ul>
           </div>
           <div class="pricing-box-footer">
-            <%= form_tag charges_path do %>
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-						          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            <% if current_user %>
+                <%= form_tag charges_path do %>
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                       data-name="Forms to Your Door"
-						          data-description="Test Taker - $14.99"
-						          data-amount="1499"
+                      data-description="Test Taker - $14.99"
+                      data-amount="1499"
                       data-panel-label="Pay {{amount}}">
-						  </script>
-						<% end %>
+                  </script>
+                <% end %>
+              <% else %>
+                <button type="button" class="btn btn-default"><%= link_to "Log In to Purchase", login_path %></button>
+            <% end %>
           </div>
         </div>
       </div>
@@ -84,15 +92,19 @@
             </ul>
           </div>
           <div class="pricing-box-footer">
-            <%= form_tag charges_path do %>
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-						          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            <% if current_user %>
+                <%= form_tag charges_path do %>
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                       data-name="Forms to Your Door"
-						          data-description="Dean's List - $19.99"
-						          data-amount="1999"
+                      data-description="Dean's List - $19.99"
+                      data-amount="1999"
                       data-panel-label="Pay {{amount}}">
-						  </script>
-						<% end %>
+                  </script>
+                <% end %>
+              <% else %>
+                <button type="button" class="btn btn-default"><%= link_to "Log In to Purchase", login_path %></button>
+            <% end %>
           </div>
         </div>
       </div>
