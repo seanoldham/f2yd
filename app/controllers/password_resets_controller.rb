@@ -36,4 +36,7 @@ class PasswordResetsController < ApplicationController
   		render :action => 'edit'
   	end
   end
+
+  def reset_password_email_sent_at
+  end
 end
