@@ -1,6 +1,9 @@
 class PasswordResetsController < ApplicationController
 	skip_before_filter :require_login
 
+  def reset_password_email_sent_at
+  end
+
   def create
   	@user = User.find_by_email(params[:email])
   	@user.deliver_reset_password_instructions! if @user
@@ -24,9 +27,6 @@ class PasswordResetsController < ApplicationController
   	else
   		render :action => 'edit'
   	end
-  end
-
-  def reset_password_email_sent_at
   end
 
 end
