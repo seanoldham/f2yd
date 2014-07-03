@@ -2,7 +2,7 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
-Rails.application.config.sorcery.submodules = [:reset_password, :remember_me]
+Rails.application.config.sorcery.submodules = [:reset_password]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -146,7 +146,7 @@ Rails.application.config.sorcery.configure do |config|
     # specify username attributes, for example: [:username, :email].
     # Default: `[:email]`
     #
-    user.username_attribute_names = :email
+    # user.username_attribute_names =
 
 
     # change *virtual* password attribute, the one which is used until an encrypted one is generated.
@@ -313,7 +313,7 @@ Rails.application.config.sorcery.configure do |config|
     # reset password email method on your mailer class.
     # Default: `:reset_password_email`
     #
-    # user.reset_password_email_method_name = reset_password_email
+    # user.reset_password_email_method_name =
 
 
     # when true sorcery will not automatically
