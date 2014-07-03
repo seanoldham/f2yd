@@ -26,4 +26,7 @@ class PasswordResetsController < ApplicationController
   	end
   end
 
+  def reset_password_email_sent_at
+  end
+
 end
