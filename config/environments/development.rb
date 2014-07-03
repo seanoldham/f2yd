@@ -35,4 +35,14 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.default_url_options = { :host => "www.formstoyourdoor.com"}
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :enable_starttls_auto => false,
+  :address              => 'mail.formstoyourdoor.com',
+  :port                 => '26',
+  :authentication       => :login,
+  :user_name            => 'admin@formstoyourdoor.com',
+  :password             => 'LN8KgFDfM98D'
+  }
 end
