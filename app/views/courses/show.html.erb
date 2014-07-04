@@ -1,0 +1,12 @@
+<header class="wrap-title">
+  <div class="container">
+    <h1 class="page-title">My Schedule</h1>
+  </div>
+</header>
+<% if @course_list.blank? %>
+	<p>No Courses Added</p>
+<% else %>
+	<%= @course_list %>
+<% end %>
+<br>
+<%= link_to "Add Course", courses_path %>

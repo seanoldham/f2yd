@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
 
-root :to => 'home#index'
+  root 'home#index'
 
-get "logout" => "sessions#destroy", :as => "logout"
-get "login" => "sessions#new", :as => "login"
-get "signup" => "users#new", :as => "signup"
-get "secret" => "home#secret", :as => "secret"
-get "pricing" => "charges#new", :as => "pricing"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+  get "secret" => "home#secret", :as => "secret"
+  get "pricing" => "charges#new", :as => "pricing"
+  get 'schedules/create'
+  get 'schedules/edit'
+  get 'schedule' => 'courses#show', :as => 'schedule'
 
-resources :users
-resources :sessions
-resources :charges
-resources :password_resets
-
+  resources :courses
+  resources :users
+  resources :sessions
+  resources :charges
+  resources :password_resets
 
   # get 'sessions/new'
 

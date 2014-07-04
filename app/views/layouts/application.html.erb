@@ -33,11 +33,16 @@
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="pricing.html">Pricing</a>
+                <%= link_to "Pricing", pricing_path %>
               </li>
               <li>
                 <a href="contact.html">Contact Us</a>
               </li>
+              <% if current_user %>
+                <li>
+                  <%= link_to "My Schedule", schedule_path %>
+                </li>
+              <% end %>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 							<% if current_user %>

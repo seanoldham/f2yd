@@ -41,6 +41,8 @@ gem 'less-rails-bootstrap', '~> 3.0'
 
 gem 'font-awesome-rails'
 
+gem 'table_print'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
