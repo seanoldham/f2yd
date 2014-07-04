@@ -18,7 +18,7 @@ class CoursesController < ApplicationController
 	end
 
 	def show
-		@course_list = Course.all
+		@course_list = Course.find(1)
 	end
 
 	def edit
