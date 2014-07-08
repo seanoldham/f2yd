@@ -3,9 +3,6 @@
     <h1 class="page-title">My Schedule</h1>
   </div>
 </header>
-<% if @course_list.blank? %>
-	<p>No Courses Added</p>
-<% else %>
 	<table class="table">
 		<thead>
 			<tr>
@@ -30,6 +27,5 @@
 	<% end %>
 		</tbody>
 	</table>
-<% end %>
 <br>
 <%= link_to "Add Course", courses_path %>

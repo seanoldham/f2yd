@@ -1,8 +1,8 @@
-class CreateCourses < ActiveRecord::Migration
+class CreateCoursesTableAgain < ActiveRecord::Migration
   def change
     create_table :courses do |t|
-      t.integer :users_id
-    	t.belongs_to :users
+      t.references :user
+    	t.belongs_to :user
     	t.string :course_num
     	t.string :course_name
     	t.string :meet_time

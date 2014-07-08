@@ -7,10 +7,8 @@ Rails.application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   get "secret" => "home#secret", :as => "secret"
   get "pricing" => "charges#new", :as => "pricing"
-  get 'schedules/create'
-  get 'schedules/edit'
-  get 'schedule' => 'courses#show', :as => 'schedule'
-
+  get "schedule" => "courses#show", :as => "schedule"
+  
   resources :courses
   resources :users
   resources :sessions
