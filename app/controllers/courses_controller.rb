@@ -24,27 +24,27 @@ class CoursesController < ApplicationController
   end
 
   def edit
+    @course = Course.find(params[:id])
   end
 
   def update
-    respond_to do |format|
-      if @course.update(course_params)
-        format.html { redirect_to @course, notice: 'Course was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+    @course = Course.find(params[:id])
+
+    if @course.update(course_params)
+      redirect_to schedule_url, notice: 'Course was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def destroy
+    @course = Course.find(params[:id])
     @course.destroy
-    respond_to do |format|
-      format.html { redirect_to courses_url, notice: 'Course was successfully destroyed.' }
-    end
+    redirect_to schedule_url, notice: 'Course was successfully deleted.'
   end
 
   private
     def course_params
-      params.require(:course).permit(:user_id, :course_num, :course_name, :meet_time, :room_num, :exam_date, :form_type)
+      params.require(:course).permit(:id, :user_id, :course_num, :course_name, :meet_time, :room_num, :exam_date, :form_type)
     end
 end

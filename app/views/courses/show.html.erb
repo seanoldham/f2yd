@@ -3,29 +3,35 @@
     <h1 class="page-title">My Schedule</h1>
   </div>
 </header>
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Course Number</th>
-				<th>Course Name</th>
-				<th>Meeting Time</th>
-				<th>Room Number</th>
-				<th>Exam Dates</th>
-				<th>Form Required</th>
-			</tr>
-		</thead>
-		<tbody>
-	<% @course_list.each do |c| %>
-			<tr>
-				<td><%= c.course_num %></td>
-				<td><%= c.course_name %></td>
-				<td><%= c.meet_time %></td>
-				<td><%= c.room_num %></td>
-				<td><%= c.exam_date %></td>
-				<td><%= c.form_type %></td>
-			</tr>
-	<% end %>
-		</tbody>
-	</table>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Course Number</th>
+					<th>Course Name</th>
+					<th>Meeting Time</th>
+					<th>Room Number</th>
+					<th>Exam Dates</th>
+					<th>Form Required</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+		<% @course_list.each do |c| %>
+				<tr>
+					<td><%= c.course_num %></td>
+					<td><%= c.course_name %></td>
+					<td><%= c.meet_time %></td>
+					<td><%= c.room_num %></td>
+					<td><%= c.exam_date %></td>
+					<td><%= c.form_type %></td>
+					<td><h5><%= link_to "Edit", edit_course_path(c) %></h5></td>
+					<td><h5><%= link_to "Delete", course_path(c), method: :delete, data: { confirm: 'Are you sure?' } %></h5></td>
+				</tr>
+		<% end %>
+			</tbody>
+		</table>
+	</div>
 <br>
-<%= link_to "Add Course", courses_path %>
+<h4><%= link_to "Add Course", courses_path %></h4>
