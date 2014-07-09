@@ -2558,3 +2558,10 @@ a.social-icon:hover {
 .icon-box.icon-box-inverse i {
   background-color: #005949;
 }
+
+#flash_notice {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #00f2c7;
+  background-color: #006452;
+}
