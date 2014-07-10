@@ -43,6 +43,8 @@ gem 'font-awesome-rails'
 
 gem 'table_print'
 
+gem 'contact_us', '~> 0.5.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

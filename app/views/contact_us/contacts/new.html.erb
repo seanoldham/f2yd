@@ -1,0 +1,54 @@
+<header class="wrap-title">
+  <div class="container">
+    <h1 class="page-title"><%= t('.contact_us') %></h1>
+  </div>
+</header>
+<%= form_for @contact, :url => contacts_path do |f| %>
+  <div class="form-group">
+    <% if ContactUs.require_name %>
+      <label for="name" class="col-sm-2 control-label">Name*</label>
+      <div class="col-sm-10">
+        <%= f.text_field :name, :id => "name" %>
+      </div>
+      <% if f.object.errors[:name].present? %>
+        <p class='inline-error'><%= f.object.errors[:name].join(' and ') %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email*</label>
+    <div class="col-sm-10">
+      <%= f.text_field :email, :id => "email" %>
+    </div>
+    <% if f.object.errors[:email].present? %>
+      <p class='inline-error'><%= f.object.errors[:email].join(' and ') %></p>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <% if ContactUs.require_subject %>
+      <div class='string required' id='contact_us_contact_subject_input'>
+        <label for="subject" class="col-sm-2 control-label">Subject*</label>
+        <div class="col-sm-10">
+          <%= f.text_field :subject, :id => "subject" %>
+        </div>
+        <% if f.object.errors[:subject].present? %>
+          <p class='inline-error'><%= f.object.errors[:subject].join(' and ') %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <div class='text required' id='contact_us_contact_message_input'>
+      <label for="message" class="col-sm-2 control-label">Message*</label>
+      <div class="col-sm-10">
+        <%= f.text_area :message, :id => "message" %>
+      </div>
+      <% if f.object.errors[:message].present? %>
+        <p class='inline-error'><%= f.object.errors[:message].join(' and ') %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.submit :submit, :class => 'submit create btn btn-default', :title => t('.submit') %>
+  </div>
+<% end %>
