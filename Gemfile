@@ -35,17 +35,11 @@ gem 'rails_12factor', group: :production
 
 gem 'stripe'
 
-gem 'jquery-ui-rails'
-
 gem 'less-rails-bootstrap', '~> 3.0'
 
 gem 'font-awesome-rails'
 
-gem 'table_print'
-
 gem 'contact_us', '~> 0.5.1'
-
-gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
