@@ -8,12 +8,13 @@ Rails.application.routes.draw do
   get "pricing" => "charges#new", :as => "pricing"
   get "schedule" => "courses#show", :as => "schedule"
   get "contact" => "contact_us/contacts#new", :as => "contact"
-  
+  get "profile" => "profiles#index", :as => "profile"
   resources :courses
   resources :users
   resources :sessions
   resources :charges
   resources :password_resets
+  resources :profiles
 
   # get 'sessions/new'
 

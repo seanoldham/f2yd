@@ -1,0 +1,38 @@
+<header class="wrap-title">
+  <div class="container">
+    <h1 class="page-title">My Profile</h1>
+  </div>
+</header>
+
+<br>
+<div class="container">
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-6">
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<td><strong>First Name</strong></td>
+						<td><%= current_user.first_name %></td>
+					</tr>
+					<tr>
+						<td><strong>Last Name</strong></td>
+						<td><%= current_user.last_name %></td>
+					</tr>
+					<tr>
+						<td><strong>Mailing Address</strong></td>
+						<td><%= current_user.address_one %> <%= current_user.address_two %><br><%= current_user.city %>,&nbsp;<%= current_user.state %>&nbsp;<%= current_user.zip_code %></td>
+					</tr>
+					<tr>
+						<td><strong>School</strong></td>
+						<td><%= current_user.school_name %></td>
+					</tr>
+				</tbody>
+			</table>
+			<%= link_to "Edit Profile", edit_profile_path(current_user) %>
+			</div>
+		</div>
+	<div class="col-md-3">
+	</div>
+</div>
