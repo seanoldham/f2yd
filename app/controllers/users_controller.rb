@@ -22,8 +22,8 @@ class UsersController < ApplicationController
   def update
     @profile = User.find(params[:id])
 
-    if @profile.update(profile_params)
-      redirect_to schedule_url, notice: 'Profile was successfully updated.'
+    if @profile.update(user_params)
+      redirect_to profile_url, notice: 'Profile was successfully updated.'
     else
       render :edit
     end
