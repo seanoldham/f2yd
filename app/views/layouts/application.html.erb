@@ -33,12 +33,6 @@
               <li>
                 <a href="/">Home</a>
               </li>
-              <li>
-                <%= link_to "Pricing", pricing_path %>
-              </li>
-              <li>
-                <%= link_to "Contact Us", contact_path %>
-              </li>
               <% if current_user %>
                 <li>
                   <%= link_to "My Schedule", schedule_path %>
@@ -47,6 +41,12 @@
                   <%= link_to "My Profile", profile_path %>
                 </li>
               <% end %>
+              <li>
+                <%= link_to "Pricing", pricing_path %>
+              </li>
+              <li>
+                <%= link_to "Contact Us", contact_path %>
+              </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 							<% if current_user %>
@@ -114,8 +114,6 @@
                   <li><%= link_to "My Schedule", schedule_path %></li>
                   <li><%= link_to "My Profile", profile_path %></li>
                 <% end %>
-                <!--<li><a href="#">Services</a></li>-->
-                <!--<li><a href="#">FAQ</a></li>-->
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </div>
