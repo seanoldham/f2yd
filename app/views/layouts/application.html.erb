@@ -44,9 +44,6 @@
               <li>
                 <%= link_to "Pricing", pricing_path %>
               </li>
-              <li>
-                <%= link_to "Contact Us", contact_path %>
-              </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 							<% if current_user %>
@@ -108,7 +105,11 @@
               <h3></h3>
               <ul class="list-unstyled three_cols">
                 <li><a href="/">Home</a></li>
-                <li><a href="login.html">Login</a></li>
+                <% if current_user %>
+                <li><%= link_to "Log out", logout_path %></li>
+              <% else %>
+                <li><%= link_to "Log in", login_path %></li>
+              <% end %>
                 <li><%= link_to "Pricing", pricing_path %></li>
                 <% if current_user %>
                   <li><%= link_to "My Schedule", schedule_path %></li>
