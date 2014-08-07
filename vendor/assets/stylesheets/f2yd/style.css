@@ -944,7 +944,8 @@ img.alignleft+p, img.alignright+p {
   animation-delay: 1.8s !important;
 }
 #header {
-  background-color: #006452;
+  background: #006452;
+  background: linear-gradient(180deg, #006452, #008C73);
   color: #fff;
   height: 140px;
 }
@@ -1089,7 +1090,8 @@ a.social-icon:hover {
   color: #fff;
 }
 .navbar-mind .nav a:hover, .navbar-mind .nav li.active a, .navbar-mind .nav a:focus {
-  background-color: #006452;
+  background: #008C73;
+  background: linear-gradient(0deg, #007762, #008C73);
 }
 .navbar-mind .nav .open>a, .navbar-mind .nav .open>a:hover, .navbar-mind .nav .open>a:focus {
   background-color: #006452;
