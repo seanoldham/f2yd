@@ -1090,12 +1090,11 @@ a.social-icon:hover {
   color: #fff;
 }
 .navbar-mind .nav a:hover, .navbar-mind .nav li.active a, .navbar-mind .nav a:focus {
-  background: #008C73;
-  background: linear-gradient(0deg, #007762, #008C73);
+  background: #008c73;
 }
 .navbar-mind .nav .open>a, .navbar-mind .nav .open>a:hover, .navbar-mind .nav .open>a:focus {
-  background-color: #006452;
-  color: #fff;
+  background-color: #008c73;
+  color: #00f2c7;
 }
 .navbar-mind .nav a .caret {
   border-top-color: #00bf9d;
@@ -2382,7 +2381,8 @@ a.social-icon:hover {
   background-color: #008c73;
 }
 .navbar-mind .nav a:hover, .navbar-mind .nav li.active a, .navbar-mind .nav a:focus {
-  background-color: #006452;
+  background-color: #008c73;
+  color: #00f2c7;
 }
 .navbar-mind .nav .open>a, .navbar-mind .nav .open>a:hover, .navbar-mind .nav .open>a:focus {
   background-color: #006452;
