@@ -48,6 +48,7 @@
     <div class="form-group">
       <label for="form_type" class="col-sm-2 control-label">Form Required:</label>
       <div class="col-sm-10">
+      <%= f.select :form_type, options_for_select(%w[GreenScantron BlueScantron BlueBook]), :id => "form_type" %>
       <%= f.text_field :form_type, :size => 30, :id => "form_type" %>
       </div>
     </div>
