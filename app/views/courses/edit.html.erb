@@ -14,12 +14,20 @@
 			</ul>
 		</div>
 	<% end %>
-			<%= f.text_field :course_num, :id => "course_num" %>
-			<%= f.text_field :course_name, :id => "course_name" %>
-			<%= f.text_field :meet_time, :id => "meet_time" %>
-			<%= f.text_field :room_num, :id => "room_num" %>
-			<%= f.text_field :exam_date, :id => "exam_date" %>
-			<%= f.select :form_type, options_for_select(%w[GreenScantron BlueScantron BlueBook]), :id => "form_type" %>
-				<%= f.submit %>
+	<div class="container">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+      <%= f.text_field :course_num, label: "Course Number" %>
+      <%= f.text_field :course_name, label: "Course Name" %>
+      <%= f.time_select :meet_time, label: "Course Meeting Time" %>
+      <%= f.text_field :room_num, label: "Room Number" %>
+      <%= f.date_select :exam_date %>
+      <%= f.select :form_type, options_for_select(form_types), label: "Form Required" %>
+        <%= f.submit %>
+			<h4><%= link_to 'Back', schedule_url %></h4>
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
 <% end %>
-<h4><%= link_to 'Back', schedule_url %></h4>
