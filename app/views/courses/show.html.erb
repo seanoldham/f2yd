@@ -22,9 +22,9 @@
 				<tr>
 					<td><%= c.course_num %></td>
 					<td><%= c.course_name %></td>
-					<td><%= c.meet_time %></td>
+					<td><%= c.meet_time.strftime("%I:%M") %></td>
 					<td><%= c.room_num %></td>
-					<td><%= c.exam_date %></td>
+					<td><%= c.exam_date.strftime("%A, %B %d, %Y") %></td>
 					<td><%= c.form_type %></td>
 					<td><h5><%= link_to "Edit", edit_course_path(c) %></h5></td>
 					<td><h5><%= link_to "Delete", course_path(c), method: :delete, data: { confirm: 'Are you sure?' } %></h5></td>
