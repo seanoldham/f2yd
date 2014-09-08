@@ -24,8 +24,9 @@
       <%= f.time_select :meet_time, label: "Course Meeting Time" %>
       <%= f.text_field :room_num, label: "Room Number" %>
       <%= f.date_select :exam_date %>
-      <%= f.select :form_type, options_for_select(form_types), label: "Form" %>
+      <%= f.select :form_type, options_for_select(form_types), label: "Form Required" %>
         <%= f.submit %>
+      <h4><%= link_to 'Back', schedule_url %></h4>
 </div>
 <% end %>
 <div class="col-md-4">
