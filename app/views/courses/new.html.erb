@@ -3,55 +3,32 @@
     <h1 class="page-title">Add Course</h1>
   </div>
 </header>
-<%= form_for :course do |f| %>
-	<% if @course.errors.any? %>
-		<div class="error_messages">
-			<h2>Form is invalid</h2>
-			<ul>
-				<% for message in @course.errors.full_messages %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-		<div class="form-group">
-			<%= f.hidden_field :user_id, :value => current_user.id %>
-			<label for="course_num" class="col-sm-2 control-label">Course Number:</label>
-			<div class="col-sm-10">
-			<%= f.text_field :course_num, :id => "course_num" %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="course_name" class="col-sm-2 control-label">Course Name:</label>
-			<div class="col-sm-10">
-			<%= f.text_field :course_name, :id => "course_name" %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="meet_time" class="col-sm-2 control-label">Meeting Time:</label>
-			<div class="col-sm-10">
-			<%= f.text_field :meet_time, :id => "meet_time" %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="room_num" class="col-sm-2 control-label">Room Number:</label>
-			<div class="col-sm-10">
-			<%= f.text_field :room_num, :id => "room_num" %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="exam-date" class="col-sm-2 control-label">Exam Dates:</label>
-			<div class="col-sm-10">
-			<%= f.text_field :exam_date, :id => "exam_date" %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="form_type" class="col-sm-2 control-label">Form Required:</label>
-			<div class="col-sm-10">
-			<%= f.text_field :form_type, :id => "form_type" %>
-			</div>
-		</div>
-		<div class="form-group">
-				<%= f.submit :class => "btn btn-default" %>
-		</div>
+<div class="container">
+<div class="col-md-4">
+</div>
+<%= bootstrap_form_for :course do |f| %>
+<div class="col-md-4">
+  <% if @course.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @course.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.text_field :course_num, label: "Course Number" %>
+      <%= f.text_field :course_name, label: "Course Name" %>
+      <%= f.time_select :meet_time, label: "Course Meeting Time" %>
+      <%= f.text_field :room_num, label: "Room Number" %>
+      <%= f.date_select :exam_date %>
+      <%= f.select :form_type, options_for_select(form_types), label: "Form Required" %>
+        <%= f.submit %>
+      <h4><%= link_to 'Back', schedule_url %></h4>
+</div>
 <% end %>
+<div class="col-md-4">
+</div>
+</div>

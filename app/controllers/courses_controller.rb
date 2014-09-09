@@ -3,6 +3,7 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
+    @course.user_id = current_user.id
   end
 
   def create

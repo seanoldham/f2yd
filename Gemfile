@@ -43,6 +43,8 @@ gem 'contact_us', '~> 0.5.1'
 
 gem 'newrelic_rpm'
 
+gem 'bootstrap_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

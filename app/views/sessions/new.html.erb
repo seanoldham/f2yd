@@ -3,45 +3,19 @@
     <h1 class="page-title">Log In</h1>
   </div>
 </header>
-<%= form_tag sessions_path do %>
-	<!--<div class="field">
-		<%= label_tag :email %>
-		<%= text_field_tag :email, params[:email] %>
-	</div>
-	<div class="field">
-		<%= label_tag :password %>
-		<%= password_field_tag :password %>
-	</div>
-	<!--<div class="field">
-		<%= check_box_tag :remember_me, 1, params[:remember_me] %>
-		<%= label_tag :remember_me %>
-	</div>-->
-	<!--<div class="actions">
-		<%= submit_tag "Log in" %>
-	</div>-->
-	<div class="form-group">
-		<div class="col-sm-1">
-			<%= label_tag :email %>
+	<div class="container">
+		<div class="col-md-5">
 		</div>
-		<div class="col-sm-11">
-			<%= text_field_tag :email, params[:email] %>
+		<div class="col-md-2">
+			<%= bootstrap_form_tag url: "/sessions" do %>
+				<%= label_tag :email %><br>
+				<%= text_field_tag :email, params[:email] %><br>
+			<%= label_tag :password %><br>
+				<%= password_field_tag :password %><br><br>
+					<%= submit_tag "Log In" %><br><br>
+					<h4><%= link_to 'Forgot Password?', new_password_reset_path %></h4>
+			<% end %>
+		</div>
+		<div class="col-md-4">
 		</div>
 	</div>
-	<div class="form-group">
-		<div class="col-sm-1">
-			<%= label_tag :password %>
-		</div>
-		<div class="col-sm-11">
-		<%= password_field_tag :password %>
-		</div>
-	</div>
-
-	<div class="form-group actions">
-		<div class="col-sm-1">
-		</div>
-		<div class="col-sm-11">
-			<%= submit_tag "Log In", :class => "btn btn-default" %>
-		</div>
-	</div>
-<% end %>
-<%= link_to 'Forgot Password?', new_password_reset_path %>
