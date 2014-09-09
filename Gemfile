@@ -37,7 +37,7 @@ gem 'stripe'
 
 gem 'less-rails-bootstrap', '~> 3.0'
 
-gem 'font-awesome-rails'
+#gem 'font-awesome-rails'
 
 gem 'contact_us', '~> 0.5.1'
 
