@@ -1170,7 +1170,11 @@ a.social-icon:hover {
   background-color: #ddd;
 }
 .carousel-mind {
-  background-color: #999;
+  background-image: url(f2yd/back2.jpg);
+  background-size: cover;
+}
+.carousel-mind-back-2 {
+  background-image: url(f2yd/back2.jpg);
   background-size: cover;
 }
 .carousel-mind .carousel-caption {
@@ -1194,9 +1198,6 @@ a.social-icon:hover {
   -ms-animation-delay: .7s;
   -o-animation-delay: .7s;
   animation-delay: .7s;
-}
-.carousel-mind .carousel-bg {
-  color: #333;
 }
 .carousel-mind .carousel-indicators {
   bottom: 0 !important;
