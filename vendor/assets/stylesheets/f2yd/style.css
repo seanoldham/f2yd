@@ -717,6 +717,9 @@ img.alignleft+p, img.alignright+p {
   margin-top: 0;
   padding-top: 0;
 }
+#how-it-works {
+  text-align: center;
+}
 .section-title a, .post-title a {
   text-decoration: none;
 }
