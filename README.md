@@ -1,29 +1,19 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+You shouldn't be here. Turn back before it's too late.
 
-### What is this repository for? ###
+## Forms to Your Door ##
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+[![Code Climate](https://codeclimate.com/repos/541b245c6956804140044d10/badges/49cfb1b68adac0b8ebf2/gpa.svg)](https://codeclimate.com/repos/541b245c6956804140044d10/feed)
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+1. You don't
 
 ### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+Send me an email. You still shouldn't be here.
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+admin@formstoyourdoor.com
