@@ -1170,11 +1170,7 @@ a.social-icon:hover {
   background-color: #ddd;
 }
 .carousel-mind {
-  background-image: url(f2yd/back2.jpg);
-  background-size: cover;
-}
-.carousel-mind-back-2 {
-  background-image: url(f2yd/back2.jpg);
+  background-color: #999;
   background-size: cover;
 }
 .carousel-mind .carousel-caption {
@@ -1198,6 +1194,9 @@ a.social-icon:hover {
   -ms-animation-delay: .7s;
   -o-animation-delay: .7s;
   animation-delay: .7s;
+}
+.carousel-mind .carousel-bg {
+  color: #333;
 }
 .carousel-mind .carousel-indicators {
   bottom: 0 !important;
@@ -2024,37 +2023,16 @@ hr {
 .mind-box:hover {
   background-color: #00735e;
 }
-.mind-box-success {
-  background-color: #097900;
-}
-.mind-box-success:hover {
-  background-color: #076000;
-}
-.mind-box-info {
-  background-color: #8300ae;
-}
-.mind-box-info:hover {
-  background-color: #700095;
-}
-.mind-box-warning {
-  background-color: #f89e01;
-}
-.mind-box-warning:hover {
-  background-color: #df8e01;
-}
-.mind-box-danger {
-  background-color: #bf0000;
-}
-.mind-box-danger:hover {
-  background-color: #a60000;
-}
 .mind-box-title {
   color: #fff;
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 .mind-box i {
-  font-size: 4em;
+  font-size: 5em;
   margin: 5px auto 8px auto;
+}
+.mind-box p {
+  font-size: 1.25em;
 }
 .inverse-wrap {
   background-color: #006452;
