@@ -100,11 +100,13 @@
       <aside id="footer-widgets">
         <div class="container">
           <div class="row">
+            <h1></h1>
+          </div>
+          <div class="row">
             <div class="col-md-4">
             </div>
             <div class="col-md-4">
-              <h3></h3>
-              <ul class="list-unstyled three_cols">
+              <ul class="list-unstyled three_cols text-center">
                 <li><a href="/">Home</a></li>
                 <% if current_user %>
                   <li><%= link_to "My Schedule", schedule_path %></li>
@@ -116,7 +118,7 @@
                 <li><%= link_to "Log in", login_path %></li>
               <% end %>
                 <li><%= link_to "Pricing", pricing_path %></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><%= link_to "Contact", contact_path %></li>
               </ul>
             </div>
             <div class="col-md-4">
