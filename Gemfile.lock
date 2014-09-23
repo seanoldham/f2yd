@@ -121,6 +121,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    skylight (0.3.20)
+      activesupport (>= 3.0.0)
     sorcery (0.8.6)
       bcrypt (~> 3.1)
       oauth (~> 0.4, >= 0.4.4)
@@ -176,6 +178,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  skylight
   sorcery
   stripe
   therubyracer

@@ -45,6 +45,8 @@ gem 'newrelic_rpm'
 
 gem 'bootstrap_form'
 
+gem 'skylight'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
