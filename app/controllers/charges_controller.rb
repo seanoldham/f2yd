@@ -6,7 +6,8 @@ class ChargesController < ApplicationController
 
 	def create
 		# Amount in cents
-		@amount = 999
+		@amount = 299
+		# Used for payment confirmation page
 		@dollar_amount = (@amount / 100.0)
 
 		customer = Stripe::Customer.create(
@@ -17,7 +18,7 @@ class ChargesController < ApplicationController
 		charge = Stripe::Charge.create(
 			:customer 		=> customer.id,
 			:amount 			=> @amount,
-			:description 	=> 'Rails Stripe customer',
+			:description 	=> 'Forms to Your Door customer',
 			:currency			=> 'usd'
 		)
 		@raw = request.raw_post

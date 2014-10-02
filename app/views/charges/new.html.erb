@@ -7,104 +7,128 @@
   <section>
     <div class="row">
       <div class="col-md-4 col-sm-6">
-        <div class="pricing-box animated fadeInUp animation-delay-7">
-          <div class="pricing-box-header">
-            <h2>Budget-Friendly</h2>
-            <p></p>
+        <div class="active-pricing-box animated fadeInUp animation-delay-9">
+          <!--<div class="active-pricing-box-header">
+            <h2>Test Taker</h2>
+          </div>-->
+          <div class="active-pricing-box-price">
+              <h2>$2.99<span id="month_text">/mo</span></h2>
           </div>
+          <div class="active-pricing-box-content">
+            <ul>
+              <li><i class="fa fa-truck"></i>Delivery based on exam schedule.</li>
+              <li><i class="fa fa-check-square"></i> One extra form per exam.</li>
+              <li><i class="fa fa-pencil"></i> #2 pencil included with delivery.</li>
+              <!--<li><i class="fa fa-calendar"></i> Perk #2</li>-->
+            </ul>
+          </div>
+          <div class="active-pricing-box-footer">
+            <% if current_user %>
+                <%= form_tag charges_path do %>
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-name="Forms to Your Door"
+                      data-description="$2.99/month"
+                      data-amount="299"
+                      data-panel-label="Pay {{amount}}">
+                  </script>
+                <% end %>
+              <% else %>
+                <button type="button" class="btn btn-default"><%= link_to "Log In to Purchase", login_path %></button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="pricing-box animated fadeInUp animation-delay-7">
+          <!--<div class="pricing-box-header">
+            <h2>Coming Soon</h2>
+            <p></p>
+          </div>-->
           <div class="pricing-box-price">
-            <h3>$9.99</h3>
+            <h2>Coming Soon</h2>
           </div>
           <div class="pricing-box-content">
             <ul>
-              <li><i class="fa fa-truck"></i> All forms delivered to you at one time.</li>
-              <li><i class="fa fa-bullhorn"></i> Reminder - Bring forms to your exams.</li>
-              <li><i class="fa fa-pencil" style="color: #ddd"></i><strike style="color: #ddd;"> #2 pencil included with delivery.</strike></li>
-              <li><i class="fa fa-calendar" style="color: #ddd"></i><strike style="color: #ddd;"> Reminder - Update schedule each semester.</strike></li>
+              <li><i class="fa fa-truck"></i><strike> This text is white.</strike></li>
+              <li><i class="fa fa-check-square"></i><strike> This text is white.</strike></li>
+              <li><i class="fa fa-pencil" style="color: #ddd"></i><strike> This text is white.</strike></li>
+              <!--<li><i class="fa fa-calendar" style="color: #ddd"></i><strike> This text is white.</strike></li>-->
             </ul>
           </div>
 					<div class="pricing-box-footer">
-			      <% if current_user %>
-                <%= form_tag charges_path do %>
-                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                          data-name="Forms to Your Door"
-                          data-description="Budget-Friendly - $9.99"
-                          data-amount="999"
-                          data-panel-label="Pay {{amount}}">
-                  </script>
-                <% end %>
-              <% else %>
-                <button type="button" class="btn btn-default"><%= link_to "Log In to Purchase", login_path %></button>
-            <% end %>
+            <button type="button" class="btn btn-default">Coming Soon</button>
           </div>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
-        <div class="pricing-box animated fadeInUp animation-delay-9">
-          <div class="pricing-box-header">
-              <h2>Test Taker</h2>
-              <p></p>
-          </div>
-          <div class="pricing-box-price">
-              <h3>$14.99</h3>
-          </div>
-          <div class="pricing-box-content">
-            <ul>
-              <li><i class="fa fa-truck"></i> Delivery based on exam schedule.</li>
-              <li><i class="fa fa-bullhorn"></i> Reminder - Bring forms to your exams.</li>
-              <li><i class="fa fa-pencil"></i> #2 pencil included with delivery.</li>
-              <li><i class="fa fa-calendar" style="color: #ddd"></i><strike style="color: #ddd;"> Reminder - Update schedule each semester.</strike></li>
-            </ul>
-          </div>
-          <div class="pricing-box-footer">
-            <% if current_user %>
-                <%= form_tag charges_path do %>
-                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-name="Forms to Your Door"
-                      data-description="Test Taker - $14.99"
-                      data-amount="1499"
-                      data-panel-label="Pay {{amount}}">
-                  </script>
-                <% end %>
-              <% else %>
-                <button type="button" class="btn btn-default"><%= link_to "Log In to Purchase", login_path %></button>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="pricing-box animated fadeInUp animation-delay-8">
-          <div class="pricing-box-header">
-            <h2>Dean's List</h2>
+        <div class="pricing-box animated fadeInUp animation-delay-7">
+          <!--<div class="pricing-box-header">
+            <h2>Coming Soon</h2>
             <p></p>
-          </div>
+          </div>-->
           <div class="pricing-box-price">
-            <h3>$19.99</h3>
+            <h2>Coming Soon</h2>
           </div>
           <div class="pricing-box-content">
             <ul>
-              <li><i class="fa fa-truck"></i> Delivery based on exam schedule.</li>
-              <li><i class="fa fa-bullhorn"></i> Reminder - Bring your forms to your exams.</li>
-              <li><i class="fa fa-arrow-up"></i><strong>Mechanical pencil upgrade.</strong></li>
-              <li><i class="fa fa-calendar"></i> Reminder - Update schedule each semester.</li>
+              <li><i class="fa fa-truck"></i><strike> This text is white.</strike></li>
+              <li><i class="fa fa-check-square"></i><strike> This text is white.</strike></li>
+              <li><i class="fa fa-pencil" style="color: #ddd"></i><strike> This text is white.</strike></li>
+              <!--<li><i class="fa fa-calendar" style="color: #ddd"></i><strike> This text is white.</strike></li>-->
             </ul>
           </div>
           <div class="pricing-box-footer">
-            <% if current_user %>
-                <%= form_tag charges_path do %>
-                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-name="Forms to Your Door"
-                      data-description="Dean's List - $19.99"
-                      data-amount="1999"
-                      data-panel-label="Pay {{amount}}">
-                  </script>
-                <% end %>
-              <% else %>
-                <button type="button" class="btn btn-default"><%= link_to "Log In to Purchase", login_path %></button>
-            <% end %>
+            <button type="button" class="btn btn-default">Coming Soon</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h1 class="section-title" id="breakline">Forms We Support</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="img-caption">
+          <img src="f2yd/882-E.png" class="img-responsive" alt="Green Scantron">
+          <div class="caption">
+            <div class="caption-content">
+              <h4>Green Scantron</h4>
+              <h5>(100 Answers)</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="img-caption">
+          <img src="f2yd/parscore.png" class="img-responsive" alt="Green Scantron">
+          <div class="caption">
+            <div class="caption-content">
+              <h4>ParSCORE</h4>
+              <h5>(100 Answers)</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="img-caption">
+          <img src="f2yd/882-E.png" class="img-responsive" alt="Green Scantron">
+          <div class="caption">
+            <div class="caption-content">
+              <h4>Blue Scantron</h4>
+              <h5>(200 Answers)</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="img-caption">
+          <img src="f2yd/bluebook.png" class="img-responsive" alt="Green Scantron">
+          <div class="caption">
+            <div class="caption-content">
+              <h4>Blue Book</h4>
+              <h5></h5>
+            </div>
           </div>
         </div>
       </div>
