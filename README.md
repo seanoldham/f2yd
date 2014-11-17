@@ -1,6 +1,6 @@
 # README #
 
-You shouldn't be here. Turn back before it's too late.
+
 
 ## Forms to Your Door ##
 
@@ -8,11 +8,11 @@ You shouldn't be here. Turn back before it's too late.
 
 ### How do I get set up? ###
 
-1. You don't
+
 
 ### Contribution guidelines ###
 
-Send me an email. You still shouldn't be here.
+
 
 ### Who do I talk to? ###
 
