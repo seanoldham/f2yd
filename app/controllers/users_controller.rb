@@ -7,25 +7,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new user_params
     if @user.save
       redirect_to login_url, :notice => "Signed up!"
     else
-      render :new
-    end
-  end
-
-  def edit
-    @profile = User.find(params[:id])
-  end
-
-  def update
-    @profile = User.find(params[:id])
-
-    if @profile.update(user_params)
-      redirect_to profile_url, notice: 'Profile was successfully updated.'
-    else
-      render :edit
+      render 'new'
     end
   end
 

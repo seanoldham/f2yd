@@ -3,7 +3,7 @@
     <h1 class="page-title">Edit Profile</h1>
   </div>
 </header>
-<%= bootstrap_form_for @profile do |f| %>
+<%= bootstrap_form_for @profile, url: update_profile_path do |f| %>
 	<% if @profile.errors.any? %>
 		<div class="error_messages">
 			<h2>Form is invalid</h2>
@@ -18,7 +18,6 @@
 		<div class="col-md-4">
 		</div>
 		<div class="col-md-4">
-			<%= f.hidden_field :user_id, :value => current_user.id %>
 			<%= f.text_field :first_name, label: "First Name" %>
 			<%= f.text_field :last_name, label: "Last Name" %>
 			<%= f.text_field :address_one, label: "Address 1" %>

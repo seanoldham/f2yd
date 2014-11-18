@@ -3,27 +3,6 @@
     <h1 class="page-title">Edit Exam</h1>
   </div>
 </header>
-<div class="container">
-<div class="col-md-4">
-</div>
-<%= bootstrap_form_for [@course, @exam] do |f| %>
-<div class="col-md-4">
-  <% if @exam.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @exam.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <%= f.date_select :date %>
-  <%= f.select :form_type, options_for_select(form_types, @exam.form_type), label: "Form Required" %>
-  <%= f.submit %>
-  <h4><%= link_to 'Back', schedule_url %></h4>
-</div>
-<% end %>
-<div class="col-md-4">
-</div>
+<div class="row">
+  <%= render partial: 'form' %>
 </div>
