@@ -13,7 +13,7 @@ module CoursesHelper
 
 	def form_types
 		[
-			['Select a Form', 'You forgot to select a form!'],
+			['Select a Form', ''],
 			['Green Scantron', 'Green Scantron'],
 			['Blue Scantron', 'Blue Scantron'],
 			['ParSCORE', 'ParSCORE'],

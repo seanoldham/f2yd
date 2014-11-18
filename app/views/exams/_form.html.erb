@@ -1,0 +1,18 @@
+<div class="col-md-4 col-md-offset-4">
+  <%= bootstrap_form_for [@course, @exam] do |f| %>
+    <% if @exam.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul class="alert alert-warning">
+          <% for message in @exam.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= f.date_select :date %>
+    <%= f.select :form_type, options_for_select(form_types, @exam.form_type), label: "Form Required" %>
+    <%= f.submit %>
+  <% end %>
+  <h4><%= link_to 'Back', schedule_url %></h4>
+</div>

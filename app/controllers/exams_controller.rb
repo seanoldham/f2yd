@@ -1,5 +1,5 @@
 class ExamsController < ApplicationController
-  
+  before_action :require_login
   before_action :find_course
   
   def new
@@ -7,22 +7,22 @@ class ExamsController < ApplicationController
   end
 
   def create
-    @exam = @course.exams.new(exam_params)
+    @exam = @course.exams.new exam_params
     if @exam.save
       flash[:success] = "Added exam to course."
       redirect_to schedule_path
     else
-      flash[:error] = "There was a problem adding that exam to course."
+      render 'new'
     end
   end
 
   def update
     @exam = @course.exams.find params[:id]
-    if @exam.update_attributes(exam_params)
+    if @exam.update_attributes exam_params
       flash[:success] = "Exam edited."
       redirect_to schedule_path
     else
-      flash[:error] = "There was a problem editing that exam."
+      render 'edit'
     end
   end
 
@@ -31,7 +31,7 @@ class ExamsController < ApplicationController
   end
 
   def destroy
-    @exam   = @course.exams.find params[:id]
+    @exam = @course.exams.find params[:id]
     if @exam.destroy
       flash[:success] = "Exam deleted from course."
       redirect_to schedule_path
@@ -40,9 +40,11 @@ class ExamsController < ApplicationController
     end
   end
 
+  # currently not in use
   def index
   end
-
+  
+  # currently not in use
   def show
   end
   

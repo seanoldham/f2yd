@@ -3,30 +3,6 @@
     <h1 class="page-title">Add Course</h1>
   </div>
 </header>
-<div class="container">
-<div class="col-md-4">
-</div>
-<%= bootstrap_form_for :course do |f| %>
-<div class="col-md-4">
-  <% if @course.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @course.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-      <%= f.hidden_field :user_id, :value => current_user.id %>
-      <%= f.text_field :course_num, label: "Course Number" %>
-      <%= f.text_field :course_name, label: "Course Name" %>
-      <%= f.time_select :meet_time, label: "Course Meeting Time" %>
-      <%= f.text_field :room_num, label: "Room Number" %>
-      <%= f.submit %>
-      <h4><%= link_to 'Back', schedule_url %></h4>
-</div>
-<% end %>
-<div class="col-md-4">
-</div>
+<div class="row">
+  <%= render partial: 'form' %>
 </div>

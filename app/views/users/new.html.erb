@@ -3,27 +3,24 @@
     <h1 class="page-title">Sign Up</h1>
   </div>
 </header>
-<%= bootstrap_form_for @user do |f| %>
-	<% if @user.errors.any? %>
-		<div class="error_messages">
-			<h2>Form is invalid</h2>
-			<ul>
-				<% for message in @user.errors.full_messages %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-	<div class="container">
-		<div class="col-md-4">
-		</div>
-		<div class="col-md-4">
-			<%= f.text_field :email, label: "Email" %>
-			<%= f.password_field :password, label: "Password" %>
-			<%= f.password_field :password_confirmation, label: "Confirm Password" %>
-			<%= f.submit %>
-		</div>
-		<div class="col-md-4">
-		</div>
-	</div>
-<% end %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <%= bootstrap_form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul class="alert alert-warning">
+            <% for message in @user.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.text_field :email, label: "Email" %>
+      <%= f.password_field :password, label: "Password" %>
+      <%= f.password_field :password_confirmation, label: "Confirm Password" %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
+

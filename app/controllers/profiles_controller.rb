@@ -1,28 +1,30 @@
 class ProfilesController < ApplicationController
-	def index
-		@profile = current_user
+  before_action :require_login
+  before_action :find_profile
+  
+  def index
   end
 
   def edit
-    @profile = User.find(params[:id])
-  end
-
-  def update
-    @profile = User.find(params[:id])
-
-    if @profile.update(profile_params)
-      redirect_to profile_url, notice: 'Profile was successfully updated.'
-    else
-      render :edit
-    end
   end
 
   def show
-    @profile = current_user
+  end
+  
+  def update
+    if @profile.update profile_params
+      redirect_to profile_url, notice: 'Profile was successfully updated.'
+    else
+      render 'edit'
+    end
   end
 
   private
+    def find_profile
+      @profile = current_user
+    end
+  
     def profile_params
-      params.require(:user).permit(:id, :first_name, :last_name, :address_one, :address_two, :city, :state, :zip_code, :school_name)
+      params.require(:user).permit(:first_name, :last_name, :address_one, :address_two, :city, :state, :zip_code, :school_name)
     end
 end
