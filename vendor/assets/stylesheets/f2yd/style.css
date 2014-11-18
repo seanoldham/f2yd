@@ -1615,9 +1615,6 @@ hr {
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
-.mind-box:hover {
-  background-color: #00735e;
-}
 .mind-box-title {
   color: #fff;
   font-size: 2.5em;
@@ -2019,9 +2016,6 @@ a.social-icon:hover {
 }
 .mind-box {
   background-color: #008c73;
-}
-.mind-box:hover {
-  background-color: #00735e;
 }
 .mind-box-success {
   background-color: #097900;

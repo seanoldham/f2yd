@@ -9,7 +9,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      redirect_to login_url, :notice => "Signed up!"
+      flash[:success] = "Signed up!"
+      redirect_to login_url
     else
       render 'new'
     end
