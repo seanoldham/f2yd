@@ -36,7 +36,7 @@ class ExamsController < ApplicationController
       flash[:success] = "Exam deleted from course."
       redirect_to schedule_path
     else
-      flash[:error] = "There was a problem deleting that exam from course."
+      flash[:warning] = "There was a problem deleting that exam from course."
     end
   end
 

@@ -8,7 +8,8 @@ class CoursesController < ApplicationController
   def create
     @course = current_user.courses.create course_params
     if @course.save
-      redirect_to schedule_url, notice: "Course Added!"
+      flash[:success] = "Course Added."
+      redirect_to schedule_url
     else
       render 'new'
     end
@@ -30,7 +31,8 @@ class CoursesController < ApplicationController
     @course = current_user.courses.find params[:id]
 
     if @course.update course_params
-      redirect_to schedule_url, notice: 'Course was successfully updated.'
+      flash[:success] = "Course was successfully updated."
+      redirect_to schedule_url
     else
       render 'edit'
     end
@@ -40,9 +42,11 @@ class CoursesController < ApplicationController
     @course = current_user.courses.find params[:id]
     
     if @course.destroy
-      redirect_to schedule_url, notice: 'Course was successfully deleted.'
+      flash[:success] = "Course was successfully deleted."
+      redirect_to schedule_url
     else
-      redirect_to schedule_url, notice: 'Course is not deleted!'
+      flash[:warning] = "Course is not deleted!"
+      redirect_to schedule_url
     end
   end
 
