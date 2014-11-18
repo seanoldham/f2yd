@@ -18,3 +18,8 @@
  *= require f2yd/style
  *= require rails_bootstrap_forms
  */
+.exam_actions a
+{
+  font-size: 12px;
+  margin-right: 5px
+}

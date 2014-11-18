@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140907194312) do
+ActiveRecord::Schema.define(version: 20141118080537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,31 @@ ActiveRecord::Schema.define(version: 20140907194312) do
     t.date     "exam_date"
     t.time     "meet_time"
   end
+
+  create_table "exam_dates", force: true do |t|
+    t.integer  "course_id"
+    t.date     "exam_date1"
+    t.date     "exam_date2"
+    t.date     "exam_date3"
+    t.date     "exam_date4"
+    t.date     "exam_date5"
+    t.date     "exam_date6"
+    t.date     "exam_date7"
+    t.date     "exam_date8"
+    t.date     "exam_date9"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "exams", force: true do |t|
+    t.date     "date"
+    t.string   "form_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "course_id"
+  end
+
+  add_index "exams", ["course_id"], name: "index_exams_on_course_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                           null: false

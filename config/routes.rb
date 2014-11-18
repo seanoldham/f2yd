@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'home#index'
 
   get "logout" => "sessions#destroy", :as => "logout"
@@ -9,7 +10,9 @@ Rails.application.routes.draw do
   get "schedule" => "courses#show", :as => "schedule"
   get "contact" => "contact_us/contacts#new", :as => "contact"
   get "profile" => "profiles#index", :as => "profile"
-  resources :courses
+  resources :courses do
+    resources :exams
+  end
   resources :users
   resources :sessions
   resources :charges
