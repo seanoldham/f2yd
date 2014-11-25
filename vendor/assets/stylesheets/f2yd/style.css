@@ -1,13 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Abel|Lato:300,400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Abel);
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 14px;
   line-height: 1.6em;
   background-color: #ddd;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-weight: 300;
   color: #008c73;
 }
@@ -1157,7 +1157,7 @@ a.social-icon:hover {
 .carousel-text h1 {
   margin: 0 0 10px 0;
   padding: 0;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #fff;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -1624,7 +1624,7 @@ hr {
   margin: 5px auto 8px auto;
 }
 .mind-box p {
-  font-size: 1.25em;
+  font-size: 1.35em;
 }
 .inverse-wrap {
   background-color: #006452;
@@ -1649,7 +1649,7 @@ hr {
 }
 .service-list li:before {
   content: counter(myIndex);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 4em;
   padding: 20px 15px;
   border: solid 1px #008c73;
@@ -2072,7 +2072,7 @@ a.social-icon:hover {
   background-color: #005949;
 }
 #flash_notice {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 16px;
   color: #00f2c7;
   background-color: #006452;
@@ -2101,7 +2101,7 @@ a.social-icon:hover {
   color: #000000;
 }
 .sign-up-button {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 3.7em;
   color: #006452;
   /*color: #008c73;*/
