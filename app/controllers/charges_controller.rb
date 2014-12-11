@@ -6,7 +6,7 @@ class ChargesController < ApplicationController
 
 	def create
 		# Amount in cents
-		@amount = 299
+		@amount = 199
 		# Used for payment confirmation page
 		@dollar_amount = (@amount / 100.0)
 
