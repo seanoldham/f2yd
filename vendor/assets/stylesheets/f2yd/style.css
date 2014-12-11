@@ -685,8 +685,9 @@ img.alignleft+p, img.alignright+p {
   margin-top: 0;
 }
 .p-lg {
-  font-size: 1.1em;
-  line-height: 180%}
+  font-size: 1.2em;
+  line-height: 180%
+}
 .wrap-title {
   background-color: #eee;
   border-bottom: solid 1px #00718c;
@@ -958,8 +959,7 @@ img.alignleft+p, img.alignright+p {
   animation-delay: 1.8s !important;
 }
 #header {
-  background: #006452;
-  background: linear-gradient(180deg, #006452, #008C73);
+  background: #008c73;
   color: #fff;
   height: 140px;
 }
@@ -1064,11 +1064,12 @@ a.social-icon:hover {
   border: 0;
 }
 .navbar-mind .nav {
-  font-size: 1.1em;
+  font-size: 1.15em;
   margin-left: -15px;
 }
 .navbar-mind .nav a {
   color: #fff;
+  font-size: 1.15em;
 }
 .navbar-mind .nav a:hover, .navbar-mind .nav li.active a, .navbar-mind .nav a:focus {
   background: #008c73;
@@ -1476,11 +1477,11 @@ a.social-icon:hover {
   background-color: #008c73;
 }
 #footer-widgets {
-  background-color: #006452;
+  background-color: #008c73;
   color: #fff;
   padding: 0 0 20px 0;
   margin-top: 30px;
-  border-top: solid 5px #008c73;
+  border-top: solid 5px #006452;
 }
 .footer-widget-title {
   font-family: 'Abel', sans-serif;
@@ -1491,6 +1492,7 @@ a.social-icon:hover {
 #footer-widgets a {
   color: #00f2c7;
   text-decoration: none;
+  font-size: 1.15em;
 }
 #footer-widgets a:hover {
   color: #fff;
@@ -1505,6 +1507,7 @@ a.social-icon:hover {
 #footer a {
   color: #00f2c7;
   text-decoration: none;
+  font-size: 1.15em;
 }
 #footer a:hover {
   color: #fff;
@@ -1935,7 +1938,7 @@ dt {
   color: #008c73;
 }
 #header {
-  background-color: #006452;
+  background-color: #008c73;
 }
 #header-title h1 span {
   color: #00f2c7;
@@ -2005,14 +2008,16 @@ a.social-icon:hover {
   background-color: #008c73;
 }
 #footer-widgets {
-  background-color: #006452;
-  border-top: solid 5px #008c73;
+  background-color: #008c73;
+  border-top: solid 5px #00f2c7;
 }
 #footer-widgets a {
   color: #00f2c7;
+  font-size: 1.15em;
 }
 #footer a {
   color: #00f2c7;
+  font-size: 1.15em;
 }
 .mind-box {
   background-color: #008c73;
