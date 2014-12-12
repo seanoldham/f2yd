@@ -9,4 +9,17 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
-//= require_tree .
+//= require jquery
+//= require jquery_ujs
+//= require f2yd/app
+//= require f2yd/bootstrap
+//= require f2yd/holder
+//= require f2yd/html5shiv
+//= require f2yd/jquery-1.10.2.min
+//= require f2yd/jquery.cookie
+//= require f2yd/jquery.countdown
+//= require f2yd/jquery.mixitup.min
+//= require f2yd/lightbox-2.6.min
+//= require f2yd/modernizr.custom
+//= require f2yd/respond.min
+//= require f2yd/styleswitcher
