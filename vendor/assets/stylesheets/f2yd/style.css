@@ -704,7 +704,7 @@ img.alignleft+p, img.alignright+p {
   padding: 0;
   line-height: 100%;
   display: inline-block;
-  color: #333;
+  color: #006452;
   -webkit-text-stroke: .007em;
 }
 .wrap-title .container {
@@ -1460,14 +1460,22 @@ a.social-icon:hover {
   border-bottom: dotted 1px #ddd;
   vertical-align: top;
 }
+.active-pricing-box-content>ul>li>span {
+  font-size: 1.2em;
+  position: relative;
+  bottom: 3px;
+}
 .active-pricing-box-content>ul>li>i {
   margin: 0 14px;
-  font-size: 1.4em;
+  font-size: 1.8em;
   list-style-position: inside;
 }
 .active-pricing-box-footer {
   margin: 10px auto;
   text-align: center;
+}
+.active-pricing-box-footer>button>a {
+  font-size: 1.3em;
 }
 .pricing-box-pro {
   border-color: #008c73;
