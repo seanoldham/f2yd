@@ -2133,3 +2133,7 @@ a.social-icon:hover {
   color: #006452;
   text-decoration: none;
 }
+#footer-links {
+  text-align: center;
+  color: #333;
+}

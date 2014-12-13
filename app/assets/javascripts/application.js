@@ -19,7 +19,6 @@
 //= require f2yd/jquery.cookie
 //= require f2yd/jquery.countdown
 //= require f2yd/jquery.mixitup.min
-//= require f2yd/lightbox-2.6.min
 //= require f2yd/modernizr.custom
 //= require f2yd/respond.min
 //= require f2yd/styleswitcher
