@@ -1,114 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forms to Your Door</title>
-  <%= favicon_link_tag "f2yd/favicon.ico" %>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <meta name="detectify-verification" content="a8f7c3c1ad3bac5ea9950f6ec5135189" />
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<head>
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Forms to Your Door</title>
+	  <%= favicon_link_tag "f2yd/favicon.ico" %>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+		<meta name="detectify-verification" content="72052e682313743ce09a953f99c5388e" />
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-57573049-1', 'auto');
-		ga('send', 'pageview');
+			ga('create', 'UA-57573049-1', 'auto');
+			ga('send', 'pageview');
 
-	</script>
-</head>
-<body>
-	<div class="boxed animated fadeIn animation-delay-5">
-		<header id="header" class="hidden-xs">
-      <div class="container">
-        <div id="header-title">
-          <h1 class="animated fadeInDown"><a href="/">Forms to <span>Your</span> Door</a></h1>
-          <p class="animated fadeInLeft">All your exam supplies, from our door to yours.</p>
-        </div>
-      </div>
-    </header>
-    <nav class="navbar navbar-static-top navbar-mind" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand visible-xs" href="/">Forms to Your <span>Door</span></a>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-mind-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <i class="fa fa-bars fa-inverse"></i>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse navbar-mind-collapse">
-            <ul class="nav navbar-nav">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <% if current_user %>
-                <li>
-                  <%= link_to "My Schedule", schedule_path %>
-                </li>
-                <li>
-                  <%= link_to "My Profile", profile_path %>
-                </li>
-              <% end %>
-              <li>
-                <%= link_to "Pricing", pricing_path %>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
+		</script>
+	</head>
+	<body>
+		<div class="boxed animated fadeIn animation-delay-5">
+			<!--<header id="header" class="hidden-xs">
+	      <div class="container">
+	        <div id="header-title">
+	          <h1 class="animated fadeInDown"><a href="/">Forms to <span>Your</span> Door</a></h1>
+	          <p class="animated fadeInLeft">All your exam supplies, from our door to yours.</p>
+	        </div>
+	      </div>
+	    </header>-->
+	    <nav class="navbar navbar-static-top navbar-mind" role="navigation">
+	      <div class="container">
+					<div class="navbar-header">
+						<a class="navbar-brand hidden-xs" href="/">Forms to Your <span>Door</span></a>
+					</div>
+	        <div class="navbar-header">
+	          <a class="navbar-brand visible-xs" href="/">Forms to Your <span>Door</span></a>
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-mind-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <i class="fa fa-bars fa-inverse"></i>
+	          </button>
+	        </div>
+					<div class="collapse navbar-collapse navbar-mind-collapse">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="/">Home</a>
+							</li>
 							<% if current_user %>
-                <% if current_user.first_name.empty? or current_user.last_name.empty? %>
-  								<li><%= link_to "Logged in as " + current_user.email, profile_path %></li>
-                <% else %>
-                  <li><%= link_to "Logged in as " + current_user.first_name + " " + current_user.last_name, profile_path %></li>
-                <% end %>
-								<li><%= link_to "Log out", logout_path %></li>
-							<% else %>
-								<li><%= link_to "Sign up", signup_path %></li>
-								<li><%= link_to "Log in", login_path %></li>
+							<li>
+								<%= link_to "My Schedule", schedule_path %>
+							</li>
+							<li>
+								<%= link_to "My Profile", profile_path %>
+							</li>
 							<% end %>
-            </ul>
-        </div>
-      </div>
-    </nav>
-		<% flash.each do |name, msg| %>
-			<%= content_tag :div, msg, :id => "flash_#{name}", :class => "alert alert-#{name}" %>
-		<% end %>
-		<%= yield %>
-      <aside id="footer-widgets">
-        <div class="container">
-          <div class="row">
-            <h1></h1>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-              <ul class="list-unstyled three_cols text-center">
-                <li><a href="/">Home</a></li>
-                <% if current_user %>
-                  <li><%= link_to "My Schedule", schedule_path %></li>
-                  <li><%= link_to "My Profile", profile_path %></li>
-                <% end %>
-                <% if current_user %>
-                  <li><%= link_to "Log out", logout_path %></li>
-                <% else %>
-                  <li><%= link_to "Log in", login_path %></li>
-                <% end %>
-                <li><%= link_to "Pricing", pricing_path %></li>
-                <li><%= link_to "Contact", contact_path %></li>
-								<li><%= link_to "Terms & Conditions", terms_path %></li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-            </div>
-          </div>
-        </div>
-      </aside>
-      <footer id="footer">
-        <p>&copy; 2014 Forms to Your Door, LLC | All rights reserved.</p>
-      </footer>
-	</div>
-</body>
+							<li>
+								<%= link_to "Pricing", pricing_path %>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<% if current_user %>
+							<% if current_user.first_name.empty? or current_user.last_name.empty? %>
+							<li><%= link_to "Logged in as " + current_user.email, profile_path %></li>
+							<% else %>
+							<li><%= link_to "Logged in as " + current_user.first_name + " " + current_user.last_name, profile_path %></li>
+							<% end %>
+							<li><%= link_to "Log out", logout_path %></li>
+							<% else %>
+							<li><%= link_to "Sign up", signup_path %></li>
+							<li><%= link_to "Log in", login_path %></li>
+							<% end %>
+						</ul>
+					</div>
+	      </div>
+	    </nav>
+			<% flash.each do |name, msg| %>
+				<%= content_tag :div, msg, :id => "flash_#{name}", :class => "alert alert-#{name}" %>
+			<% end %>
+			<%= yield %>
+	      <aside id="footer-widgets">
+	        <div class="container">
+	          <div class="row">
+	            <h1></h1>
+	          </div>
+	          <div class="row">
+	            <div class="col-md-1">
+	            </div>
+	            <div class="col-md-10" id="footer-links">
+                <a href="/">Home</a> |
+									<% if current_user %>
+	                  <%= link_to "My Schedule", schedule_path %> |
+	                  <%= link_to "My Profile", profile_path %> |
+	                <% end %>
+	                <%= link_to "Pricing", pricing_path %> |
+	                <%= link_to "Contact", contact_path %> |
+									<%= link_to "Terms & Conditions", terms_path %> |
+									<% if current_user %>
+									<%= link_to "Log out", logout_path %>
+									<% else %>
+									<%= link_to "Log in", login_path %>
+									<% end %>
+	            </div>
+	            <div class="col-md-1">
+	            </div>
+	          </div>
+	        </div>
+	      </aside>
+	      <footer id="footer">
+	        <p>&copy; 2014 Forms to Your Door, LLC | All rights reserved.</p>
+	      </footer>
+		</div>
+	</body>
 </html>
