@@ -16,6 +16,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def activate
+    if (@user = User.load_from_activation_token(params[:id]))
+      @user.activate!
+      flash[:success] = "User was successfully activated"
+      redirect_to login_url
+    else
+      not_authenticated
+    end
+  end
+
   private
 
   def user_params
