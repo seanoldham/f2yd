@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
   											:last_name,
   											:school_name
   validates_uniqueness_of :email
+  validates_email_format_of :email, :message => "is not formatted properly"
 end
