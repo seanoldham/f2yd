@@ -1,6 +1,8 @@
 <header class="wrap-title">
   <div class="container">
-    <h1 class="page-title">My Schedule</h1>
+    <h1 class="page-title"><%= title 'My Schedule' %></h1>
+    <% description 'My Schedule page.' %>
+    <% keywords 'my schedule page' %>
   </div>
 </header>
 <div class="container">
@@ -26,7 +28,7 @@
           <td style="vertical-align: middle;"><%= c.course_name %></td>
           <td style="vertical-align: middle;"><%= c.meet_time.strftime("%I:%M") %></td>
           <td style="vertical-align: middle;"><%= c.room_num %></td>
-          
+
           <% unless c.exams.empty? %>
             <td style="vertical-align: middle;">
               <% c.exams.each do |exam| %>
@@ -58,7 +60,7 @@
             <td></td>
             <td style="vertical-align: middle;"></td>
           <% end %>
-          
+
           <td><h6><%= link_to "Edit", edit_course_path(c) %></h5></td>
           <td><h6><%= link_to "Delete", course_path(c), method: :delete, data: { confirm: 'Are you sure?' } %></h5></td>
         </tr>

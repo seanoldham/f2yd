@@ -112,6 +112,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     mime-types (1.25.1)
     minitest (5.4.1)
     multi_json (1.10.1)
@@ -231,6 +233,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   less-rails-bootstrap (~> 3.0)
+  meta-tags
   newrelic_rpm
   pg
   rails (= 4.1.1)

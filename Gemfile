@@ -49,6 +49,8 @@ gem 'activeadmin', github: 'activeadmin'
 
 gem 'devise'
 
+gem 'meta-tags'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

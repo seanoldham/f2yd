@@ -1,6 +1,8 @@
 <header class="wrap-title">
   <div class="container">
-    <h1 class="page-title">Log In</h1>
+    <h1 class="page-title"><%= title 'Log In' %></h1>
+    <% description 'Log In page.' %>
+    <% keywords 'log in page login' %>
   </div>
 </header>
 	<%= bootstrap_form_tag url: "/sessions" do %>
