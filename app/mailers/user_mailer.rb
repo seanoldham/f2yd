@@ -32,7 +32,7 @@ class UserMailer < ActionMailer::Base
   #
   def activation_success_email(user)
     @user = user
-    @url = login_path
+    @url = "http://www.formstoyourdoor.com/login"
     mail(:to => user.email,
          :subject => "Activation Successful")
   end
