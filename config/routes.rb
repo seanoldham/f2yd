@@ -4,18 +4,17 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'home#index'
 
-  get "logout"    => "sessions#destroy", :as => "logout"
-  get "login"     => "sessions#new", :as => "login"
-  get "signup"    => "users#new", :as => "signup"
-  get "terms"    => "home#terms", :as => "terms"
-  get "pricing"   => "charges#new", :as => "pricing"
-  get "schedule"  => "courses#index", :as => "schedule"
-  get "contact"   => "contact_us/contacts#new", :as => "contact"
-  get "profile"   => "profiles#index", :as => "profile"
-  get "profile/edit"   => "profiles#edit", :as => "edit_profile"
+  get "logout"           => "sessions#destroy", :as => "logout"
+  get "login"            => "sessions#new", :as => "login"
+  get "signup"           => "users#new", :as => "signup"
+  get "terms"            => "home#terms", :as => "terms"
+  get "pricing"          => "charges#new", :as => "pricing"
+  get "schedule"         => "courses#index", :as => "schedule"
+  get "contact"          => "contact_us/contacts#new", :as => "contact"
+  get "profile"          => "profiles#index", :as => "profile"
+  get "profile/edit"     => "profiles#edit", :as => "edit_profile"
   patch "profile/update" => "profiles#update", :as => "update_profile"
-
-  post 'users'      => "users#create"
+  post 'users'           => "users#create"
 
   resources :courses do
     resources :exams
