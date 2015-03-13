@@ -1,5 +1,5 @@
 class ChargesController < ApplicationController
-	before_filter :require_login, :only => :create
+	before_filter :require_login, :except => :new
 
 	def new
 	end
@@ -22,9 +22,18 @@ class ChargesController < ApplicationController
 			:description 	=> 'Forms to Your Door customer',
 			:currency			=> 'usd'
 		)
-		@raw = request.raw_post
+
+		current_user.customer_id = customer.id
+		current_user.save!
+	
 	rescue Stripe::CardError => e
 		flash[:error] = e.message
 		redirect_to charges_path
+	end
+
+	def destroy
+		Stripe.api_key = ENV['SECRET_KEY']
+		customer = Stripe::Customer.retrieve(current_user.customer_id)
+		customer.delete
 	end
 end

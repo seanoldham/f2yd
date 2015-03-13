@@ -24,9 +24,9 @@
           </div>
           <div class="active-pricing-box-footer">
             <% if current_user %>
-            <button type="button" class="btn btn-default"><%= link_to "Submit Your Schedule", schedule_path %></button>
+              <%= button_to "Submit Your Schedule", schedule_path, :class => "btn btn-default", :method => :get %>
             <% else %>
-            <button type="button" class="btn btn-default"><%= link_to "Sign Up", signup_path %></button>
+              <%= button_to "Sign Up", signup_path, :class => "btn btn-default", :method => :get %>
             <% end %>
           </div>
         </div>
@@ -56,7 +56,7 @@
             </script>
             <% end %>
             <% else %>
-            <button type="button" class="btn btn-default"><%= link_to "Log In to Purchase", login_path %></button>
+              <%= button_to "Log In to Purchase", login_path, :class => "btn btn-default", :method => :get %>
             <% end %>
           </div>
         </div>
