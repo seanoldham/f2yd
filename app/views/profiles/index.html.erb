@@ -34,8 +34,8 @@
       </table>
       <h4><%= button_to "Edit Profile", edit_profile_path(current_user.id), :class => "btn btn-default", :method => :get %></h4>
       </div>
-      <h4><%= button_to "Cancel Your Subscription", charge_path(current_user.id), :class => "btn btn-default", :method => :delete %></h4>
-      <%= button_to "Delete Your Account", user_path(current_user.id), :class => "btn btn-default", :method => :delete %>
+      <h4><%= button_to "Cancel Your Subscription", charge_path(current_user.id), :class => "btn btn-default", :method => :delete, data: { confirm: 'Are you sure?' } %></h4>
+      <%= button_to "Delete Your Account", user_path(current_user.id), :class => "btn btn-default", :method => :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   <div class="col-md-3">
   </div>
