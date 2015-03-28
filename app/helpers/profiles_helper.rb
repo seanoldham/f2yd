@@ -54,4 +54,14 @@ module ProfilesHelper
       ['Wyoming', 'WY']
     ]
 	end
+
+  def supported_schools
+    [
+      ['University of Houston - Main Campus', 'University of Houston - Main Campus'],
+      ['University of Houston - Clear Lake', 'University of Houston - Clear Lake'],
+      ['Houston Community College', 'Houston Community College'],
+      ['Lone Star College', 'Lone Star College'],
+      ['San Jacinto College', 'San Jacinto College']
+    ]
+  end
 end

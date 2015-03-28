@@ -20,6 +20,10 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def destroy
+    current_user.delete
+  end
+
   private
     def find_profile
       @profile = current_user

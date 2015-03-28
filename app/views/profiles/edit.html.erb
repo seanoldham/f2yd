@@ -27,7 +27,7 @@
 			<%= f.text_field :city, label: "City" %>
 			<%= f.select :state, options_for_select(us_states), label: "State" %>
 			<%= f.phone_field :zip_code, label: "Zip Code" %>
-			<%= f.text_field :school_name, label: "School" %>
+			<%= f.select :school_name, options_for_select(supported_schools), label: "School" %>
 			<%= f.submit %>
 			<h4><%= link_to 'Back', profile_url %></h4>
 		</div>

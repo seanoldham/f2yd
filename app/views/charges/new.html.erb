@@ -45,16 +45,20 @@
           </div>
           <div class="active-pricing-box-footer">
             <% if current_user %>
-            <%= form_tag charges_path do %>
-            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-name="Forms to Your Door"
-            data-email="<%= current_user.email %>"
-            data-description="$1.99/month"
-            data-amount="199"
-            data-panel-label="Pay {{amount}}">
-            </script>
-            <% end %>
+              <% if current_user.city? %>
+                <%= form_tag charges_path do %>
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-name="Forms to Your Door"
+                data-email="<%= current_user.email %>"
+                data-description="$1.99/month"
+                data-amount="199"
+                data-panel-label="Pay {{amount}}">
+                </script>
+                <% end %>
+              <% else %>
+                <%= button_to "Complete Your Profile", edit_profile_path, :class => "btn btn-default", :method => :get %>
+              <% end %>
             <% else %>
               <%= button_to "Log In to Purchase", login_path, :class => "btn btn-default", :method => :get %>
             <% end %>

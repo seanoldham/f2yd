@@ -10,11 +10,19 @@
         </ul>
       </div>
     <% end %>
-    <%= f.text_field :course_num, label: "Course Number" %>
+    <%= f.text_field :course_num, label: "Course Number", class: "form-group" %>
     <%= f.text_field :course_name, label: "Course Name" %>
-    <%= f.time_select :meet_time, label: "Course Meeting Time" %>
+    <div class="form-group clockpicker">
+      <%= f.text_field :meet_time, class: "form-control", value: "8:00", label: "Course Meeting Time" %>
+    </div>
     <%= f.text_field :room_num, label: "Room Number" %>
     <%= f.submit %>
   <% end %>
   <h4><%= link_to 'Back', schedule_url %></h4>
 </div>
+<script type="text/javascript">
+$('.clockpicker').clockpicker({
+  donetext: 'Done',
+  autoclose: true
+});
+</script>

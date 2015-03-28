@@ -22,3 +22,5 @@
 //= require f2yd/modernizr.custom
 //= require f2yd/respond.min
 //= require f2yd/styleswitcher
+//= require f2yd/bootstrap-clockpicker
+//= require f2yd/jquery-clockpicker

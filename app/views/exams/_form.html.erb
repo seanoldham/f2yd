@@ -11,7 +11,17 @@
       </div>
     <% end %>
     <%= f.date_select :date %>
-    <%= f.select :form_type, options_for_select(form_types, @exam.form_type), label: "Form Required" %>
+    <% if current_user.school_name == "University of Houston - Main Campus" %>
+      <%= f.select :form_type, options_for_select(uh_form_types, @exam.form_type), label: "Form Required" %>
+    <% elsif current_user.school_name == "University of Houston - Clear Lake" %>
+      <%= f.select :form_type, options_for_select(uhcl_form_types, @exam.form_type), label: "Form Required" %>
+    <% elsif current_user.school_name == "Houston Community College" %>
+      <%= f.select :form_type, options_for_select(hcc_form_types, @exam.form_type), label: "Form Required" %>
+    <% elsif current_user.school_name == "Lone Star College" %>
+      <%= f.select :form_type, options_for_select(lsc_form_types, @exam.form_type), label: "Form Required" %>
+    <% elsif current_user.school_name == "San Jacinto College" %>
+      <%= f.select :form_type, options_for_select(sjc_form_types, @exam.form_type), label: "Form Required" %>
+    <% end %>
     <%= f.submit %>
   <% end %>
   <h4><%= link_to 'Back', schedule_url %></h4>

@@ -21,12 +21,7 @@
       <%= f.email_field :email, label: "Email" %>
       <%= f.text_field :first_name, label: "First Name" %>
       <%= f.text_field :last_name, label: "Last Name" %>
-      <%= f.text_field :address_one, label: "Address 1" %>
-      <%= f.text_field :address_two, label: "Address 2" %>
-      <%= f.text_field :city, label: "City" %>
-      <%= f.select :state, options_for_select(us_states), label: "State" %>
-      <%= f.phone_field :zip_code, label: "Zip Code" %>
-      <%= f.text_field :school_name, label: "School" %>
+      <%= f.select :school_name, options_for_select(supported_schools), label: "School" %>
       <%= f.password_field :password, label: "Password" %>
       <%= f.password_field :password_confirmation, label: "Confirm Password" %>
       <%= f.submit %>
