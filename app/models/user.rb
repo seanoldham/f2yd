@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
   has_many :courses, dependent: :destroy
-  has_one :charge, dependent: :destroy
 
   # attr_acessible :email, :password, :password_confirmation
 
