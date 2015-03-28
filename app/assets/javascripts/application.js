@@ -24,3 +24,4 @@
 //= require f2yd/styleswitcher
 //= require f2yd/bootstrap-clockpicker
 //= require f2yd/jquery-clockpicker
+//= require bootstrap-datepicker

@@ -18,6 +18,7 @@
  *= require f2yd/bootstrap-clockpicker
  *= require f2yd/jquery-clockpicker
  *= require rails_bootstrap_forms
+ *= require bootstrap-datepicker3
  */
 .exam_actions a
 {

@@ -10,7 +10,7 @@
         </ul>
       </div>
     <% end %>
-    <%= f.date_select :date %>
+    <%= f.text_field :date, class: "datepicker" %>
     <% if current_user.school_name == "University of Houston - Main Campus" %>
       <%= f.select :form_type, options_for_select(uh_form_types, @exam.form_type), label: "Form Required" %>
     <% elsif current_user.school_name == "University of Houston - Clear Lake" %>
@@ -26,3 +26,17 @@
   <% end %>
   <h4><%= link_to 'Back', schedule_url %></h4>
 </div>
+<script type="text/javascript">
+var nowDate = new Date();
+var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
+  $(document).ready(function(){
+    $('.datepicker').datepicker( {
+      startView: 2,
+      weekStart: 1,
+      disableTouchKeyboard: true,
+      autoclose: true,
+      startDate: today,
+      format: "MM dd, yyyy"
+    });
+  });
+</script>
