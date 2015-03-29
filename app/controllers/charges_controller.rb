@@ -8,7 +8,7 @@ class ChargesController < ApplicationController
 		# Amount in cents
 		@amount = 0
 		# Used for payment confirmation page
-		@dollar_amount = (199 / 100.0)
+		@dollar_amount = (399 / 100.0)
 
 		customer = Stripe::Customer.create(
 			:email 	=> current_user.email,
