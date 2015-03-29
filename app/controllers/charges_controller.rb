@@ -28,5 +28,8 @@ class ChargesController < ApplicationController
 		Stripe.api_key = ENV['SECRET_KEY']
 		customer = Stripe::Customer.retrieve(current_user.customer_id)
 		customer.delete
+
+		current_user.customer_id = ""
+		current_user.save!
 	end
 end

@@ -22,7 +22,272 @@
     <% elsif current_user.school_name == "San Jacinto College" %>
       <%= f.select :form_type, options_for_select(sjc_form_types, @exam.form_type), label: "Form Required" %>
     <% end %>
-    <%= f.submit %>
+    <h5><a data-toggle="modal" data-target=".bs-example-modal-lg">Forms We Support at <%= current_user.school_name %></a></h5>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4>Forms We Support at <%= current_user.school_name %></h4>
+          </div>
+            <% if current_user.school_name == "University of Houston - Main Campus" %>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../886-E-LOVAS.png" class="img-responsive" alt="Green Mini Essay Book">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Green Mini Essay Book</h4>
+                        <h5>(100 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../88483.png" class="img-responsive" alt="Red Form">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Red Form</h4>
+                        <h5>(200 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../4521.png" class="img-responsive" alt="Blue Scantron">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Blue Scantron</h4>
+                        <h5>(200 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../NO-IMAGE.png" class="img-responsive" alt="Blue Scantron">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Purple Scantron - General Purpose</h4>
+                        <h5>(157 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../77517.png" class="img-responsive" alt="Blue Book">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Blue Book</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% elsif current_user.school_name == "University of Houston - Clear Lake" %>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../886-E-LOVAS.png" class="img-responsive" alt="Green Mini Essay Book">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Green Mini Essay Book</h4>
+                        <h5>(100 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../882-E.png" class="img-responsive" alt="Green Scantron">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Green Scantron</h4>
+                        <h5>(100 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../4521.png" class="img-responsive" alt="Blue Scantron">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Blue Scantron</h4>
+                        <h5>(200 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../77517.png" class="img-responsive" alt="Blue Book">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Blue Book</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% elsif current_user.school_name == "Houston Community College" %>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../882-E.png" class="img-responsive" alt="Green Scantron">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Green Scantron</h4>
+                        <h5>(100 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../parscore.png" class="img-responsive" alt="ParSCORE">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>ParSCORE</h4>
+                        <h5>(100 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../4521.png" class="img-responsive" alt="Blue Scantron">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Blue Scantron</h4>
+                        <h5>(200 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../77517.png" class="img-responsive" alt="Blue Book">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Blue Book</h4>
+                        <h5></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% elsif current_user.school_name == "Lone Star College" %>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../95946.png" class="img-responsive" alt="White Scantron - Half Sheet">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>White Scantron - Half Sheet</h4>
+                        <h5>(50 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../95677.png" class="img-responsive" alt="White Scantron - Full Sheet 100">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>White Scantron - Full Sheet</h4>
+                        <h5>(100 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../94746.png" class="img-responsive" alt="White Scantron - Full Sheet 200">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>White Scantron - Full Sheet</h4>
+                        <h5>(200 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../77517.png" class="img-responsive" alt="Blue Book">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Blue Book</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% elsif current_user.school_name == "San Jacinto College" %>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../882-E.png" class="img-responsive" alt="Green Scantron">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Green Scantron</h4>
+                        <h5>(100 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../886-E-LOVAS.png" class="img-responsive" alt="Green Mini Essay Book">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Green Mini Essay Book</h4>
+                        <h5>(100 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../F-289-PAR-L.png" class="img-responsive" alt="ParSCORE Half Sheet">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>ParSCORE Half Sheet</h4>
+                        <h5>(200 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../F-288-PAR-L.png" class="img-responsive" alt="ParSCORE Full Sheet">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>ParSCORE Full Sheet</h4>
+                        <h5>(200 Answers)</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="img-caption">
+                    <img src="../../../../77517.png" class="img-responsive" alt="Blue Book">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <h4>Blue Book</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+    <%= f.submit class: "btn btn-default" %>
   <% end %>
   <h4><%= link_to 'Back', schedule_url %></h4>
 </div>
