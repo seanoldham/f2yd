@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = "Signed up!"
+      flash[:success] = "Signed up! <b>Your activation email is on its way</b>"
       redirect_to login_url
     else
       render 'new'

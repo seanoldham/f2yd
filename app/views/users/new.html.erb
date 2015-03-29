@@ -24,7 +24,7 @@
       <%= f.select :school_name, options_for_select(supported_schools), label: "School" %>
       <%= f.password_field :password, label: "Password" %>
       <%= f.password_field :password_confirmation, label: "Confirm Password" %>
-      <%= f.submit %>
+      <%= f.submit class: "btn btn-f2yd" %>
     <% end %>
     <br><p>By signing up, you are agreeing to our <%= link_to "Terms and Conditions", terms_path %>.</p>
   </div>

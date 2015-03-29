@@ -10,13 +10,13 @@
         </ul>
       </div>
     <% end %>
-    <%= f.text_field :course_num, label: "Course Number", class: "form-group" %>
-    <%= f.text_field :course_name, label: "Course Name" %>
+    <%= f.text_field :course_num, label: "Course Number", class: "form-group", placeholder: "Ex: MATH1301" %>
+    <%= f.text_field :course_name, label: "Course Name", placeholder: "Ex: College Algebra" %>
     <div class="form-group clockpicker">
-      <%= f.text_field :meet_time, class: "form-control", value: "8:00", label: "Course Meeting Time" %>
+      <%= f.text_field :meet_time, class: "form-control", placeholder: "Select start time of course", label: "Course Meeting Time" %>
     </div>
-    <%= f.text_field :room_num, label: "Room Number" %>
-    <%= f.submit %>
+    <%= f.text_field :room_num, label: "Room Number", placeholder: "234A" %>
+    <%= f.submit class: "btn btn-default btn-f2yd" %>
   <% end %>
   <h4><%= link_to 'Back', schedule_url %></h4>
 </div>
