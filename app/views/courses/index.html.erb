@@ -26,7 +26,6 @@
             <td style="vertical-align: middle;" class="text-center"><%= c.course_name %></td>
             <td style="vertical-align: middle;" class="text-center"><%= c.meet_time.strftime("%I:%M") %></td>
             <td style="vertical-align: middle;" class="text-center"><%= c.room_num %></td>
-
             <% unless c.exams.empty? %>
               <td style="vertical-align: middle;" class="text-center">
                 <% c.exams.each do |exam| %>
@@ -54,6 +53,6 @@
       </tbody>
     </table>
   </div>
-<br>
-<h4><%= link_to "Add Course", new_course_path %></h4>
+  <br>
+  <h4><%= link_to "Add Course", new_course_path %></h4>
 </div>
