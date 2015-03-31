@@ -2108,6 +2108,7 @@ a.social-icon:hover {
   z-index: 2;
   top: 0px;
   left: 0px;
+  background-color: #00f2c7;
 }
 .sign-up-button a:hover {
   color: #006452;
