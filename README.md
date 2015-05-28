@@ -4,7 +4,7 @@
 
 ## Forms to Your Door ##
 
-[![Code Climate](https://codeclimate.com/repos/541b245c6956804140044d10/badges/49cfb1b68adac0b8ebf2/gpa.svg)](https://codeclimate.com/repos/541b245c6956804140044d10/feed)
+[![Code Climate](https://codeclimate.com/github/seanosaur/f2yd/badges/gpa.svg)](https://codeclimate.com/github/seanosaur/f2yd)
 
 ### How do I get set up? ###
 
